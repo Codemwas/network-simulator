@@ -13,6 +13,7 @@ const lucideEsmPath = path.resolve(
 
 export default defineConfig({
   plugins: [react()],
+  base: '/network-simulator/',
   resolve: {
     alias: {
       'lucide-react': lucideEsmPath,

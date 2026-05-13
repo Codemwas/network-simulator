@@ -2,9 +2,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Router, Shield, ShieldOff, Trash2,
+  Router, Wifi, Shield, ShieldOff, Trash2,
   PowerOff, RefreshCw, AlertTriangle,
-  CheckCircle, XCircle, Plus, Search, Sliders,
+  CheckCircle, XCircle, Search, Sliders,
   Network, Server, Monitor, Ban
 } from 'lucide-react';
 import { toast } from 'react-hot-toast';

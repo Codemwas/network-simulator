@@ -2,7 +2,7 @@
   "name": "network-simulation",
   "version": "1.0.0",
   "description": "Network topology simulation and visualization",
-  "private": true,
+  "private": false,
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,7 +1,7 @@
 // src/components/Layout/Header.jsx
 import { useState } from 'react';
-import { useAuth } from '../../contexts/AuthContext.jsx';
-import { useTheme } from '../../contexts/ThemeContext.jsx.jsx';
+import { useAuth } from '../../contexts/AuthContext';
+import { useTheme } from '../../contexts/ThemeContext';
 import { Bell, Moon, Sun, User, LogOut } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 
@@ -11,8 +11,13 @@ export default function Header() {
   const [showNotifications, setShowNotifications] = useState(false);
 
   const handleSignOut = async () => {
-    await signOut();
-    toast.success('Signed out successfully');
+    try {
+      await signOut();
+      toast.success('Signed out successfully');
+      // Layout will automatically redirect when user becomes null
+    } catch (error) {
+      toast.error('Failed to sign out: ' + error.message);
+    }
   };
 
   return (

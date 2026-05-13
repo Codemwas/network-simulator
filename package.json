@@ -8,7 +8,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint src --ext js,jsx"
+    "lint": "eslint src --ext js,jsx",
+    "api": "node api/server.js",
+    "simulate": "node api/simulator.js",
+    "start-backend": "./start-backend.sh",
+    "stop-backend": "./stop-backend.sh"
   },
   "dependencies": {
     "cors": "^2.8.6",
